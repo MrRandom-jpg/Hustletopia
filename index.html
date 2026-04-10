@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,16 +9,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
-    .card-hover:hover { transform: translateY(-4px); }
+    .card-hover:hover { transform: translateY(-6px); transition: all 0.3s; }
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200">
 
   <!-- Navigation -->
   <nav class="border-b border-zinc-800 bg-zinc-950 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
       <a href="/" class="text-2xl font-bold text-white">ZeroHustle</a>
-      <div class="flex gap-6 text-sm">
+      <div class="flex gap-8 text-sm font-medium">
         <a href="/" class="hover:text-emerald-400">Home</a>
         <a href="/best-free-ai-tools-2025" class="hover:text-emerald-400">Latest Article</a>
         <a href="/about" class="hover:text-emerald-400">About</a>
@@ -26,7 +27,7 @@
   </nav>
 
   <!-- Hero -->
-  <header class="max-w-6xl mx-auto px-6 pt-16 pb-12 text-center">
+  <header class="max-w-6xl mx-auto px-6 pt-20 pb-12 text-center">
     <h1 class="text-5xl font-bold text-white mb-4">Zero Budget. Real Hustles.</h1>
     <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
       Practical side hustle ideas, AI tools, and affiliate strategies that actually work in 2025.
@@ -34,60 +35,29 @@
   </header>
 
   <!-- Random Side Hustle Generator -->
-  <div class="max-w-6xl mx-auto px-6 pb-16">
-    <div class="bg-zinc-900 rounded-3xl p-10 text-center border border-zinc-800">
-      <h2 class="text-3xl font-semibold mb-3">Random Side Hustle Generator</h2>
-      <p class="text-zinc-400 mb-8">Click below for a fresh, realistic side hustle idea tailored for 2025.</p>
-      <button onclick="generateHustle()" 
-              class="bg-white text-black font-semibold px-10 py-4 rounded-2xl hover:bg-emerald-400 transition text-lg">
-        <i class="fas fa-dice mr-2"></i> GIVE ME A HUSTLE IDEA
-      </button>
-      <div id="hustle-result" class="mt-10 hidden"></div>
-    </div>
-  </div>
-
-  <!-- Featured Article -->
-  <div class="max-w-6xl mx-auto px-6 pb-16">
-    <h2 class="text-2xl font-semibold mb-6">Latest Article</h2>
-    <a href="/best-free-ai-tools-2025" class="block bg-zinc-900 rounded-3xl overflow-hidden card-hover border border-zinc-800">
-      <div class="p-8">
-        <span class="text-emerald-400 text-sm font-medium">AI TOOLS • MARCH 2025</span>
-        <h3 class="text-3xl font-bold text-white mt-3 mb-4">
-          Best Free AI Tools for Side Hustlers in 2025 (Tested & Ranked)
-        </h3>
-        <p class="text-zinc-400 text-lg">
-          I tested dozens of AI tools. Here are the 7 best ones that actually help you make money with zero budget.
-        </p>
-        <div class="mt-6 text-emerald-400 font-medium flex items-center gap-2">
-          Read Article <span class="text-xl">→</span>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  <!-- Free Tools & Resources -->
   <div class="max-w-6xl mx-auto px-6 pb-20">
-    <h2 class="text-2xl font-semibold mb-8">Free Tools & Resources I Recommend</h2>
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-zinc-900 rounded-3xl p-12 text-center border border-zinc-800">
+      <h2 class="text-3xl font-semibold mb-4">Random Side Hustle Generator</h2>
+      <p class="text-zinc-400 mb-10 max-w-md mx-auto">Click below for a fresh, realistic side hustle idea tailored for 2025. All zero-budget friendly.</p>
       
-      <div class="bg-zinc-900 rounded-3xl p-8 card-hover border border-zinc-800">
-        <h3 class="text-xl font-semibold mb-4">🤖 AI Tools</h3>
-        <p class="text-zinc-400">Start with Grok, Claude, and Gemini — all have strong free tiers.</p>
-        <a href="#" class="text-emerald-400 mt-6 block">Explore AI Tools →</a>
-      </div>
+      <button onclick="generateHustle()" 
+              class="bg-white text-black font-semibold px-10 py-4 rounded-2xl hover:bg-emerald-400 transition-all text-lg inline-flex items-center gap-3">
+        <i class="fas fa-dice"></i> GIVE ME A HUSTLE IDEA
+      </button>
 
-      <div class="bg-zinc-900 rounded-3xl p-8 card-hover border border-zinc-800">
-        <h3 class="text-xl font-semibold mb-4">📦 Amazon Associates</h3>
-        <p class="text-zinc-400">Recommend products you already use. Easy approval for new sites.</p>
-        <a href="/disclosure" class="text-emerald-400 mt-6 block">Join Amazon Associates →</a>
-      </div>
-
-      <div class="bg-zinc-900 rounded-3xl p-8 card-hover border border-zinc-800">
-        <h3 class="text-xl font-semibold mb-4">📣 Google AdSense</h3>
-        <p class="text-zinc-400">Place ads on your site once you have decent content and traffic.</p>
-        <a href="https://www.google.com/adsense/start" target="_blank" class="text-emerald-400 mt-6 block">Apply for AdSense →</a>
-      </div>
+      <div id="hustle-result" class="mt-12 hidden"></div>
     </div>
+  </div>
+
+  <!-- Latest Article -->
+  <div class="max-w-6xl mx-auto px-6 pb-20">
+    <h2 class="text-2xl font-semibold mb-6 px-2">Latest Article</h2>
+    <a href="/best-free-ai-tools-2025" class="block bg-zinc-900 rounded-3xl p-8 border border-zinc-800 card-hover">
+      <span class="text-emerald-400 text-sm font-medium">AI TOOLS • MARCH 2025</span>
+      <h3 class="text-3xl font-bold mt-3 mb-4">Best Free AI Tools for Side Hustlers in 2025 (Tested & Ranked)</h3>
+      <p class="text-zinc-400">I tested dozens of AI tools. Here are the 7 best ones that actually help you make money with zero budget.</p>
+      <div class="text-emerald-400 mt-6 inline-flex items-center gap-2 font-medium">Read Article →</div>
+    </a>
   </div>
 
   <!-- Footer -->
@@ -96,7 +66,7 @@
       <p class="text-2xl font-bold text-white mb-2">ZeroHustle</p>
       <p class="text-zinc-400 mb-8">Smart side hustles for 2025 and beyond.</p>
       
-      <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm mb-10">
+      <div class="flex flex-wrap justify-center gap-x-8 text-sm mb-10">
         <a href="/about" class="text-emerald-400 hover:text-emerald-300">About</a>
         <a href="/disclosure" class="text-emerald-400 hover:text-emerald-300">Affiliate Disclosure</a>
         <a href="/privacy-policy" class="text-emerald-400 hover:text-emerald-300">Privacy Policy</a>
@@ -110,19 +80,24 @@
   </footer>
 
   <script>
-    // Basic generator function (you can expand this later)
+    const ideas = [
+      { title: "Pinterest Affiliate Marketing", earnings: "$800 – $4,000+/mo", desc: "Build niche Pinterest pages driving traffic to Amazon and ClickBank products.", steps: "Choose niche → Create 100+ pins in Canva → Join affiliate programs → Post daily." },
+      { title: "AI Prompt Engineering Services", earnings: "$1,000 – $5,000/mo", desc: "Help small businesses write better prompts for AI tools.", steps: "Practice daily → Offer free samples on X and Reddit → Charge $100–$300 per project." },
+      { title: "Faceless YouTube Shorts", earnings: "$1,500 – $10,000+/mo", desc: "Compile motivational clips or AI content into viral Shorts.", steps: "Use CapCut → Post every day → Monetize after 1,000 subscribers." },
+      { title: "Digital Product Business", earnings: "$500 – $6,000/mo", desc: "Create and sell Notion templates, planners, or trackers on Gumroad.", steps: "Build 5 products → Launch on Twitter & Pinterest." },
+      { title: "Reddit & Twitter Service Arbitrage", earnings: "$2,000 – $7,000/mo", desc: "Find clients needing simple tasks and use AI to deliver fast.", steps: "Offer services → Use AI to scale delivery → Keep the margin." }
+      // I can add 20+ more if you want. Let me know.
+    ];
+
     function generateHustle() {
-      const ideas = [
-        "Start a Pinterest affiliate marketing page using only free tools.",
-        "Offer AI prompt engineering services to small businesses on X and Reddit.",
-        "Create faceless YouTube Shorts using public domain clips and AI voice.",
-        "Build and sell digital planners or Notion templates on Gumroad."
-      ];
       const random = ideas[Math.floor(Math.random() * ideas.length)];
       document.getElementById('hustle-result').innerHTML = `
-        <div class="bg-zinc-800 rounded-2xl p-6 text-left max-w-2xl mx-auto">
-          <p class="text-emerald-400 font-medium mb-2">YOUR NEXT HUSTLE IDEA:</p>
-          <p class="text-lg">${random}</p>
+        <div class="bg-zinc-800 rounded-2xl p-8 text-left max-w-2xl mx-auto">
+          <p class="text-emerald-400 text-xs tracking-widest mb-2">YOUR NEXT HUSTLE IDEA</p>
+          <h3 class="text-2xl font-bold text-white">${random.title}</h3>
+          <p class="text-emerald-400 font-semibold mt-1 mb-4">${random.earnings}</p>
+          <p class="text-zinc-300">${random.desc}</p>
+          <p class="text-zinc-400 text-sm mt-6"><strong>Quick Start:</strong> ${random.steps}</p>
         </div>`;
       document.getElementById('hustle-result').classList.remove('hidden');
     }
