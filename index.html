@@ -37,7 +37,7 @@
   <!-- Random Side Hustle Generator -->
   <div class="max-w-6xl mx-auto px-6 pb-20">
     <div class="bg-zinc-900 rounded-3xl p-12 text-center border border-zinc-800">
-      <h2 class="text-3xl font-semibold mb-4">Random Side Hustle Generator</h2>
+      <h2 class="text-3xl font-semibold mb-3">Random Side Hustle Generator</h2>
       <p class="text-zinc-400 mb-10 max-w-md mx-auto">Click below for a fresh, realistic side hustle idea tailored for 2025. All zero-budget friendly.</p>
       
       <button onclick="generateHustle()" 
@@ -81,12 +81,13 @@
 
   <script>
     const ideas = [
-      { title: "Pinterest Affiliate Marketing", earnings: "$800 – $4,000+/mo", desc: "Build niche Pinterest pages driving traffic to Amazon and ClickBank products.", steps: "Choose niche → Create 100+ pins in Canva → Join affiliate programs → Post daily." },
-      { title: "AI Prompt Engineering Services", earnings: "$1,000 – $5,000/mo", desc: "Help small businesses write better prompts for AI tools.", steps: "Practice daily → Offer free samples on X and Reddit → Charge $100–$300 per project." },
-      { title: "Faceless YouTube Shorts", earnings: "$1,500 – $10,000+/mo", desc: "Compile motivational clips or AI content into viral Shorts.", steps: "Use CapCut → Post every day → Monetize after 1,000 subscribers." },
-      { title: "Digital Product Business", earnings: "$500 – $6,000/mo", desc: "Create and sell Notion templates, planners, or trackers on Gumroad.", steps: "Build 5 products → Launch on Twitter & Pinterest." },
-      { title: "Reddit & Twitter Service Arbitrage", earnings: "$2,000 – $7,000/mo", desc: "Find clients needing simple tasks and use AI to deliver fast.", steps: "Offer services → Use AI to scale delivery → Keep the margin." }
-      // I can add 20+ more if you want. Let me know.
+      { title: "Pinterest Affiliate Marketing", earnings: "$800 – $4,000+/mo", desc: "Build niche Pinterest accounts that drive traffic to Amazon and ClickBank products.", steps: "Choose a niche → Create 100+ pins in Canva → Join affiliate programs → Post consistently." },
+      { title: "AI Prompt Engineering Services", earnings: "$1,000 – $5,000/mo", desc: "Help small businesses write better prompts for ChatGPT, Claude, and Grok.", steps: "Practice daily → Offer free samples on Twitter & Reddit → Charge per project." },
+      { title: "Faceless YouTube Shorts", earnings: "$1,500 – $10,000+/mo", desc: "Create motivational, facts, or compilation Shorts using AI voice and free clips.", steps: "Use CapCut → Post daily → Monetize after hitting requirements." },
+      { title: "Digital Notion Templates", earnings: "$500 – $6,000/mo", desc: "Design and sell productivity templates, trackers, and dashboards on Gumroad.", steps: "Build 5 templates → Launch on Twitter and Pinterest." },
+      { title: "Reddit & X Service Arbitrage", earnings: "$1,200 – $5,000/mo", desc: "Find clients needing simple tasks and use AI to complete them quickly.", steps: "Offer services → Deliver with AI → Keep the profit margin." },
+      { title: "AI Headshot Business", earnings: "$800 – $4,000/mo", desc: "Offer professional AI-generated headshots and portraits.", steps: "Use Leonardo.AI → Build portfolio → Sell packs for $15–$49." },
+      { title: "Micro SaaS Idea Validation", earnings: "$2,000 – $12,000+/mo", desc: "Use AI to find problems and build simple tools with no-code platforms.", steps: "Validate on Twitter → Build MVP → Charge monthly." }
     ];
 
     function generateHustle() {
@@ -94,10 +95,10 @@
       document.getElementById('hustle-result').innerHTML = `
         <div class="bg-zinc-800 rounded-2xl p-8 text-left max-w-2xl mx-auto">
           <p class="text-emerald-400 text-xs tracking-widest mb-2">YOUR NEXT HUSTLE IDEA</p>
-          <h3 class="text-2xl font-bold text-white">${random.title}</h3>
-          <p class="text-emerald-400 font-semibold mt-1 mb-4">${random.earnings}</p>
-          <p class="text-zinc-300">${random.desc}</p>
-          <p class="text-zinc-400 text-sm mt-6"><strong>Quick Start:</strong> ${random.steps}</p>
+          <h3 class="text-2xl font-bold text-white mb-1">${random.title}</h3>
+          <p class="text-emerald-400 font-semibold mb-5">${random.earnings}</p>
+          <p class="text-zinc-300 mb-6">${random.desc}</p>
+          <p class="text-zinc-400 text-sm"><strong>Quick Start Steps:</strong> ${random.steps}</p>
         </div>`;
       document.getElementById('hustle-result').classList.remove('hidden');
     }
